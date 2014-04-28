@@ -1,9 +1,9 @@
 package pathutils_test
 
 import (
+	. "git.koofr.lan/go-pathutils.git"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	. "pathutils"
 )
 
 func check(path string, existing []string, newPath string, retries int, expectErr bool) {
