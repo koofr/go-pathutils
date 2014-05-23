@@ -1,7 +1,7 @@
 package pathutils_test
 
 import (
-	. "git.koofr.lan/go-pathutils.git"
+	. "github.com/koofr/go-pathutils"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
