@@ -9,6 +9,7 @@ import (
 var _ = Describe("ContentType", func() {
 	It("should return content type for text file", func() {
 		Expect(ContentType("path/to/file.txt")).To(Equal("text/plain"))
+		Expect(ContentType("path/to/file.m4v")).To(Equal("video/x-m4v"))
 	})
 
 	It("should return content type for file without ext", func() {

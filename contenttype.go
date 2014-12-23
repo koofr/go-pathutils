@@ -8,8 +8,17 @@ import (
 
 func ContentType(path string) string {
 	ext := strings.ToLower(filepath.Ext(path))
-	ctypeParts := strings.Split(mime.TypeByExtension(ext), ";")
-	ctype := ctypeParts[0]
+
+	ctype := ""
+
+	if ext != "" {
+		ctype = MimeMap[ext[1:]]
+	}
+
+	if ctype == "" {
+		ctypeParts := strings.Split(mime.TypeByExtension(ext), ";")
+		ctype = ctypeParts[0]
+	}
 
 	if ctype == "" {
 		ctype = "application/octet-stream"
